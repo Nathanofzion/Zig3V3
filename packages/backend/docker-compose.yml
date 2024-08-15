@@ -1,0 +1,51 @@
+version: "3"
+networks: 
+  app-network:
+    driver: bridge
+services:
+  backend:
+    image: node:lts
+    ports:
+      - "${PORT}:${PORT}"
+      - 5555:5555
+    working_dir: /app
+    networks:
+      - app-network
+    environment:
+      POSTGRES_URL: ${POSTGRES_URL}
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    depends_on:
+      - pgdb
+    stdin_open: true
+    tty: true
+
+  pgdb:
+    image: postgres:14
+    restart: always
+    container_name: pgdb
+    volumes:
+      - db-volume:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+    env_file:
+      - .env
+
+  redis:
+    container_name: redis
+    image: redis:7
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis:/data
+    networks:
+      - app-network
+    command: redis-server --protected-mode no
+
+volumes: 
+  db-volume:
+  redis:

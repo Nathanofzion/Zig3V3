@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+model Subscriptions {
+  id           Int           @id @default(autoincrement())
+  contractId   String
+  keyXdr       String?
+  protocol     Protocol?
+  contractType ContractType?
+  storageType  StorageType?
+  network      Network @default(TESTNET)
+
+  @@unique([contractId, keyXdr])
+  @@index([network, protocol, contractType])
+}
+
+enum Network {
+  TESTNET
+  MAINNET
+}
+
+enum Protocol {
+  SOROSWAP
+  PHOENIX
+}
+
+enum ContractType {
+  FACTORY
+  PAIR
+  ROUTER
+  MULTIHOP
+}
+
+enum StorageType {
+  INSTANCE
+  PERSISTENT
+}
+
+model XlmUsdPrice {
+  id        Int           @id @default(autoincrement())
+  price     Float
+  updatedAt DateTime
+}
+
+model EventSubscriptions {
+  id            Int           @id @default(autoincrement())
+  contractId    String
+  maxSingleSize String?
+  topic1        String?
+  topic2        String?
+  topic3        String?
+  topic4        String?
+  network       Network @default(TESTNET)
+
+  @@unique([contractId, maxSingleSize])
+  @@index([network, topic1, topic2, contractId])
+}

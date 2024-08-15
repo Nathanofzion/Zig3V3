@@ -1,0 +1,79 @@
+{
+  "tokens": [
+    {
+      "symbol": "BLAH",
+      "name": "BlabberCoin",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "YAWN",
+      "name": "Yawnerium",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "ZAP",
+      "name": "ZapatoToken",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "BEEP",
+      "name": "BoopToken",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "SNOOZE",
+      "name": "SnoozerCoin",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "GIGGLE",
+      "name": "GigglyCoin",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "HAHA",
+      "name": "HahaToken",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "LOL",
+      "name": "LaughOutLoudToken",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "SNORT",
+      "name": "SnortCoin",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "WHEEZE",
+      "name": "Wheezerium",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "CHUCKLE",
+      "name": "ChuckleToken",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "SMIRK",
+      "name": "SmirkCoin",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "TEEHEE",
+      "name": "TeeHeeToken",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "GRIN",
+      "name": "GrinToken",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    },
+    {
+      "symbol": "GUFFAW",
+      "name": "GuffawCoin",
+      "icon": "https://app.soroswap.finance/unknown-token.png"
+    }
+  ]
+}

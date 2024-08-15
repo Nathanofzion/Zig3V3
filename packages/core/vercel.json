@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "name": "my-express-api",
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "api/server.js"
+    }
+  ]
+}
