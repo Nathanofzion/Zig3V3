@@ -16,7 +16,7 @@
    npm install
    ```
 
-4. **Run Project Locally**.
+4. **Run Project Localy & see port:5173 http://localhost:5173/**.
 
    ```bash
    npm run dev
